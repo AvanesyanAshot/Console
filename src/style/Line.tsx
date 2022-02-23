@@ -8,7 +8,7 @@ export interface ILine {
 
 const StyledLine = styled.div<ILine>`
   font-size: 24px;
-  color: ${(props) => props.color};
+  color: ${(props) => props.color || props.theme.colors.primary};
 `;
 
 const Line = (props: ILine) => {

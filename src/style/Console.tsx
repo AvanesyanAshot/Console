@@ -14,9 +14,15 @@ const StyledConsole = styled.textarea<IConsole>`
   font-size: 24px;
   border: none;
   resize: none;
-  color: ${(props) => props.color};
+  color: ${(props) => props.color || props.theme.colors.primary};
   &:focus {
     outline: none;
+  }
+  @media ${(props) => props.theme.media.phone} {
+    border: 1px solid red;
+  }
+  @media ${(props) => props.theme.media.tablet} {
+    border: 1px solid green;
   }
 `;
 

@@ -16,7 +16,7 @@ function App() {
   return (
     <AppWrapper>
       <Flex justify="center">
-        <Title color={"green"}>Hello</Title>
+        <Title>Hello</Title>
       </Flex>
       <Flex direction="column">
         <Console />

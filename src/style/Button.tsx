@@ -32,18 +32,20 @@ const StyledButton = styled.button.attrs((props) => ({
   &:hover {
     animation: ${rotateAnimation} 1s infinite linear;
   }
-  align-self: ${(props: IButton) => props.align || "stretch"};
-  ${(props) =>
+  align-self: ${(props: any) => props.align || "stretch"};
+  ${(props: any) =>
     props.primary &&
     css`
-      color: ${(props: IButton) => props.color || "white"};
-      background: ${(props) => props.background || "white"};
+      color: ${(props: any) => props.color || props.theme.colors.primary};
+      background: ${(props: any) =>
+        props.background || props.theme.colors.primary};
     `}
   ${(props) =>
     props.outlined &&
     css`
-      color: ${(props: IButton) => props.color || "white"};
-      border: 1px solid ${(props) => props.color || "white"};
+      color: ${(props: any) => props.color || props.theme.colors.primary};
+      border: 1px solid
+        ${(props: any) => props.color || props.theme.colors.primary};
       background: transparent;
     `}
 `;

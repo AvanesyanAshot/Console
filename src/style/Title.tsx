@@ -7,7 +7,7 @@ export interface ITitle {
 }
 
 const StyledTitle = styled.h1<ITitle>`
-  color: ${(props) => props.color};
+  color: ${(props) => props.color || props.theme.colors.secondary};
 `;
 
 const Title = (props: ITitle) => {
