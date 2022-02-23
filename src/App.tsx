@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import Flex from "./style/Flex";
+import Title from "./style/Title";
 
 const AppWrapper = styled.div`
   width: 100%;
@@ -9,7 +11,13 @@ const AppWrapper = styled.div`
 `;
 
 function App() {
-  return <AppWrapper>Hello</AppWrapper>;
+  return (
+    <AppWrapper>
+      <Flex justify="center">
+        <Title color={"green"}>Hello</Title>
+      </Flex>
+    </AppWrapper>
+  );
 }
 
 export default App;

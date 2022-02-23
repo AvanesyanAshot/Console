@@ -2,11 +2,12 @@ import React from "react";
 import styled from "styled-components";
 
 export interface ITitle {
-  color: string;
+  color?: string;
+  children: string;
 }
 
-const StyledTitle = styled.h1`
-  color: ${(props) => props.color || props.theme.colors.primary};
+const StyledTitle = styled.h1<ITitle>`
+  color: ${(props) => props.color};
 `;
 
 const Title = (props: ITitle) => {
